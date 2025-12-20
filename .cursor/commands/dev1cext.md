@@ -6,11 +6,8 @@
 4. Особенности расширения в том что заменяемые процедуры и функции с директивой ИзменениеИКонтроль должны посимвольно соответствовать заменяемой процедуре или функции, все изменения вносятся директивами: #Удаление #КонецУдаления - для 
 удаления и #Вставка #КонецВставки для вставки.
 5. Каждое изменение должно сопровождаться изменением версии в файле Configuration.xml в секции Version и прибавлять по 1 в последнюю группу версии то есть 0.1.0.9 следующая 0.1.0.10 и так далее.
-6. После внесения изменений ты должен выполнить доставку изменений в тестовую базу с помощью трех команд
-'C:\Program Files\1cv8\8.3.26.1521\bin\1cv8.exe' DESIGNER /S BXZ-NOTE.WSL:1641/TEST_ERP_BRZ_01 /NAdmin /LoadConfigFromFiles D:\git\ikon_fact_cost -Extension ikon_cost_Доработки
-'C:\Program Files\1cv8\8.3.26.1521\bin\1cv8.exe' DESIGNER /S BXZ-NOTE.WSL:1641/TEST_ERP_BRZ_01 /NAdmin /UpdateDBCfg -Extension ikon_cost_Доработки
-'C:\Program Files\1cv8\8.3.26.1521\bin\1cv8.exe' DESIGNER /S BXZ-NOTE.WSL:1641/TEST_ERP_BRZ_01 /NAdmin /ReduceEventLogSize 2025-12-20
-каждая из этих команд выполняется около 1 минуты - надо обязательно делать паузу между запусками
+6. После внесения изменений ты должен выполнить доставку изменений в тестовую базу одной командой:
+& 'C:\Program Files\1cv8\8.3.26.1521\bin\1cv8.exe' DESIGNER /S BXZ-NOTE.WSL:1641/TEST_ERP_BRZ_01 /NAdmin /LoadConfigFromFiles D:\git\ikon_fact_cost -Extension ikon_cost_Доработки; Start-Sleep -Seconds 60; & 'C:\Program Files\1cv8\8.3.26.1521\bin\1cv8.exe' DESIGNER /S BXZ-NOTE.WSL:1641/TEST_ERP_BRZ_01 /NAdmin /UpdateDBCfg -Extension ikon_cost_Доработки; Start-Sleep -Seconds 60; & 'C:\Program Files\1cv8\8.3.26.1521\bin\1cv8.exe' DESIGNER /S BXZ-NOTE.WSL:1641/TEST_ERP_BRZ_01 /NAdmin /ReduceEventLogSize 2025-12-21; Start-Sleep -Seconds 60
 7. После применения надо обязательно проверять результат выполнения отчета с помощью инструмента prod_cost за период с 01.01.2025 по 31.12.2025
 8. С помощью инструмента execution_log с ограничением периода по текущему дню например 19.12.2025 можно прочитать журнал регистрации - надо обязательно фильтровать результат по времени выполнения и в расследуемом интервале должно отсутствовать событие _$Session$_.ConfigExtensionApplyError с комментарием содержащим 'Ошибка применения модуля ikon_cost_Доработки' - если это событие есть это говорит о том что не выполнен п.4.
 9. Старый вариант отчета запускается при ПараметрыДерева.Вставить("ИспользоватьПакетнуюОбработку", Ложь);
