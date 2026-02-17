@@ -1,23 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
-	<CommonModule uuid="c8ae5763-d013-4b83-8201-61a351df980c">
+	<DefinedType uuid="5a58149c-7f51-403d-907d-5f1ae5b55feb">
 		<InternalInfo>
-			<xr:PropertyState>
-				<xr:Property>Module</xr:Property>
-				<xr:State>Extended</xr:State>
-			</xr:PropertyState>
+			<xr:GeneratedType name="DefinedType.ДенежнаяСуммаЛюбогоЗнака" category="DefinedType">
+				<xr:TypeId>675d080b-80f6-4bc4-913d-c099b4a3ade0</xr:TypeId>
+				<xr:ValueId>0af61b2b-2cee-4c3e-a5db-2f4ec8ca638c</xr:ValueId>
+			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
 			<ObjectBelonging>Adopted</ObjectBelonging>
-			<Name>СтруктураСебестоимости</Name>
+			<Name>ДенежнаяСуммаЛюбогоЗнака</Name>
 			<Comment/>
-			<ExtendedConfigurationObject>c70e847b-73b3-4d64-a8cd-b5ce91901881</ExtendedConfigurationObject>
-			<Global>false</Global>
-			<ClientManagedApplication>false</ClientManagedApplication>
-			<Server>true</Server>
-			<ExternalConnection>true</ExternalConnection>
-			<ClientOrdinaryApplication>true</ClientOrdinaryApplication>
-			<ServerCall>false</ServerCall>
+			<ExtendedConfigurationObject>e9d9b9f6-1beb-4143-8dc1-746ce5bf6d50</ExtendedConfigurationObject>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Properties>
-	</CommonModule>
+	</DefinedType>
 </MetaDataObject>

@@ -1,15 +1,75 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.19">
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.20">
 	<ConfigVersions>
-		<Metadata name="CommonModule.СтруктураСебестоимости" id="c8ae5763-d013-4b83-8201-61a351df980c" configVersion="b7216ebdc8439f893a32256831a678e3ddbb7f29"/>
-		<Metadata name="CommonModule.СтруктураСебестоимости.Module" id="c8ae5763-d013-4b83-8201-61a351df980c.0" configVersion="ad762bf5b28b9920a0367d9757b327f5c3cf670f"/>
-		<Metadata name="Configuration.ikon_cost_Доработки" id="0e764b4b-998f-44e8-924f-ffa8ee202e95" configVersion="0a4398ab06048703a806c202273d980e0eae3433"/>
+		<Metadata name="Catalog.КлючиАналитикиУчетаПартий" id="c36d3bb6-fd10-4fc7-b067-888de52ee01f" configVersion="db7cd083b0badff61afb6d4210eae952dc0c3fe4"/>
+		<Metadata name="Catalog.Номенклатура" id="57bd625f-cc0e-4132-b655-099e7cf91b94" configVersion="b0b7ce482f89273837079dc75a5b628d684a6ec1"/>
+		<Metadata name="Catalog.Организации" id="d3a16362-2310-4362-8867-55ada16772b9" configVersion="2e3181424112a2be675a375800c423bbdd43c24d"/>
+		<Metadata name="Catalog.СерииНоменклатуры" id="f272480b-7687-43fc-9b67-ce83d250926c" configVersion="a6d92775773bb7c5ecfd04f75d9f4376002b610d"/>
+		<Metadata name="Catalog.СтруктураПредприятия" id="057855db-91c4-42fb-8178-ed094b1aa3e2" configVersion="95cf93345b8bb300e270b785509f169af6c87ec3"/>
+		<Metadata name="Catalog.ХарактеристикиНоменклатуры" id="acf6fa7e-9bc1-4524-89ba-eb1e5695c0b5" configVersion="36988472eea8311d618e430351a413d841512f6f"/>
+		<Metadata name="CommonModule.СтруктураСебестоимости" id="c8ae5763-d013-4b83-8201-61a351df980c" configVersion="9d03d55df3254ccbefa125b5dead5ab62e59c73b"/>
+		<Metadata name="CommonModule.СтруктураСебестоимости.Module" id="c8ae5763-d013-4b83-8201-61a351df980c.0" configVersion="e672cb5c375a613423e41f1585b1b03fd767b192"/>
+		<Metadata name="Configuration.ikon_cost_Доработки" id="0e764b4b-998f-44e8-924f-ffa8ee202e95" configVersion="847835fc4474b4520e1ac4fe745a5d9fcc8baaa8"/>
+		<Metadata name="DefinedType.ДенежнаяСуммаЛюбогоЗнака" id="5a58149c-7f51-403d-907d-5f1ae5b55feb" configVersion="8f6fc8b7876c32135c3f12a920b259fb75962fa8"/>
+		<Metadata name="DefinedType.ДокументПартии" id="e334de61-d160-4ff9-968b-7769ee8d8eac" configVersion="1e6110fff3e3494573d727da11605d711e5baf12"/>
+		<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости" id="e9e41305-00ca-42b0-9e94-e93957b66efc" configVersion="231124888b7afe92c45c4236100ee19be0c77974">
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПостоянныеРегл" id="01aacff5-d735-45e8-b014-fb0256585d79"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.Организация" id="04c4e965-77a1-4867-bb79-6c03f9585137"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПеременныеБезНДС" id="09750600-3c57-4f32-9467-baf05f4e3c3d"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Attribute.ДатаРасчёта" id="09ec935e-39ba-440c-adcb-0a50cadb143b"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.Характеристика" id="0b73f3be-2abb-4807-a70f-13304e872720"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Attribute.ИдентификаторСтроки" id="0bd7bd3f-6f18-4df6-be12-e44cedd70004"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.АналитикаУчетаПартийЗатрата" id="0c6d6a28-021e-4d2b-a5eb-79b8f37b5130"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.ПартияЗатрата" id="0cff8f5c-7b06-4356-b3b5-459ba4291b76"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПостоянные" id="0ff3b5b2-ec88-4e14-8711-17efc3fe7438"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.Подразделение" id="12c80cd4-8c4c-4933-8ce6-2c3e1b6170cc"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Attribute.ТребуетсяРазузлование" id="1df23f9b-7819-416b-83a6-a79cc4fb220a"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.СуммаЗатрата" id="264e16d1-32de-45bc-b545-4297bae69aa1"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.КоличествоЗатрата" id="28ba907e-e6f0-48d0-9181-adc11aa32679"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.Трудозатраты" id="2b465630-e356-4d08-9ef5-aca0dd939041"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.ПартияПродукции" id="39524ce8-8247-4e88-82c2-d5bffd92055a"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ДопРасходыРегл" id="39bf1641-0b9c-4e7d-a275-37f693dcfa18"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ДопРасходыСНДС" id="4044803f-4437-43ed-89a8-a32a9fefbd15"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.МатериальныеБезНДС" id="40a8eb00-cfae-4ffd-9fe7-baa194940222"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.МатериальныеУпр" id="41e040a5-94d1-42ad-a49b-df53085196f2"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.Серия" id="47b145af-1541-4b5d-87a6-1c0ba2f69ed5"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.НДД" id="4d2302c3-c75f-4141-8238-d70e7878109a"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ДопРасходы" id="516f412a-27af-47ea-a53c-fc03acd89969"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.НалоговыйУчет" id="520a1de2-0bc7-46e7-b6e8-9a34201d3a56"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.СтоимостьЗабалансоваяРегл" id="530cc2d0-638d-4c93-83a1-8bcb0a0e05df"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ДопРасходыУпр" id="5955d23b-5e61-4359-bef9-3fc80f1090aa"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.МатериальныеСНДС" id="59ac191a-1d47-47c6-a813-12a0eed12d8b"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.СтоимостьЗабалансоваяУпр" id="64e0dbf1-1133-4f21-b575-523bb2f93b1e"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ТрудозатратыУпр" id="64f4c97a-5a0c-4fd7-89e3-7e42ae90d316"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Attribute.ВерсияРасчёта" id="795567bf-78ff-4548-b893-2508c4ba8d37"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.Уровень" id="7d4a0a48-aac5-471f-8164-72852d1a7022"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПеременныеРегл" id="940a5b43-3ecc-49c2-a485-1b944adf11e6"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.СуммаЗабалансовая" id="9d7c7fc0-97d0-453a-9a1c-215111b27e48"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПостоянныеСНДС" id="b349861f-b72a-4775-b810-9b4027895afe"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПостоянныеБезНДС" id="b758925a-834d-4b1a-85cf-7aeea0b9ba43"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПостоянныеУпр" id="b8e17c39-887a-4fd5-a919-44b726cd6db5"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПеременные" id="b979562f-5a09-40bc-9340-3a7851fe734d"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ВременнаяРазница" id="bd40a4a0-f86f-4dbc-b5e1-3cc7837feb18"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ТрудозатратыСНДС" id="beb75dca-02b0-4565-a7a0-f9a35fa2949a"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПеременныеСНДС" id="bedee26d-930b-4be1-8a44-82a49761794e"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ДопРасходыБезНДС" id="bf2fb4ba-aafe-418a-80c5-9338932354c6"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостояннаяРазница" id="d0d1e6f4-7569-450c-a523-a65e2dd0b83c"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.АналитикаУчетаПартийПродукции" id="d19b94e4-d4de-4c92-8d38-5d92c44774f1"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.Номенклатура" id="d5e28620-8588-4f61-8011-7cab54e9355d"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПеременныеУпр" id="daf7fb90-fd61-482e-91de-154fe683d4f0"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ТрудозатратыРегл" id="ed85efce-ffc3-405d-a1d2-360a8f5eaa83"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.Материальные" id="ef25250f-ddfe-4109-af47-29199f5e1fc6"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.МатериальныеРегл" id="f370e78c-fc77-4707-97f1-986cbeb77516"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.ТипЗатрат" id="fe19cc8a-c44a-4924-8269-0482e3967c8a"/>
+		</Metadata>
+		<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.AdditionalIndexes" id="e9e41305-00ca-42b0-9e94-e93957b66efc.3" configVersion="d36f592ba57ecef566cdabb9470f8fd42efbcde2"/>
 		<Metadata name="Language.Русский" id="744ff905-5944-433b-b533-3e5e4229105c" configVersion="eb866ee931e3367471f4f2d0adb97b810cdcd13c"/>
 		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции" id="1e9c1b59-9467-4009-b5c5-6ae7435db386" configVersion="8707c5f1cab141d461cdc1d3ea5046b163c960c2"/>
 		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.Help" id="1e9c1b59-9467-4009-b5c5-6ae7435db386.1" configVersion="83de161cb1b450b8d86de54b65b60bf91e283484"/>
-		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.ObjectModule" id="1e9c1b59-9467-4009-b5c5-6ae7435db386.0" configVersion="939c5796590e020c569484dfc8dbd4652a34792f"/>
+		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.ObjectModule" id="1e9c1b59-9467-4009-b5c5-6ae7435db386.0" configVersion="257cc01761f8d10649246fdd1cd6bb5c2e057191"/>
 		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.Template.ОсновнаяСхемаКомпоновкиДанных" id="d0298b08-b4d4-4472-b50b-fdb5840b23d5" configVersion="c291157920c7759b5413db21385e6fea0c3b7d02"/>
 		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="d0298b08-b4d4-4472-b50b-fdb5840b23d5.0" configVersion="2b489f421c3c22f47ee87f8b29f60382c0187e41"/>
 		<Metadata name="Role.ikon_cost_ОсновнаяРоль" id="0afda970-1e21-4b5e-9d17-c6abe7ac8485" configVersion="7682e92795c558f84d02360beb70a8f77deeb0ea"/>
+		<Metadata name="Role.ikon_cost_ОсновнаяРоль.Rights" id="0afda970-1e21-4b5e-9d17-c6abe7ac8485.0" configVersion="77225f3ba36b6ccd3b9f4c906d588fe13173acec"/>
 	</ConfigVersions>
 </ConfigDumpInfo>

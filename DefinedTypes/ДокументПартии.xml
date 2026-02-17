@@ -1,23 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
-	<CommonModule uuid="c8ae5763-d013-4b83-8201-61a351df980c">
+	<DefinedType uuid="e334de61-d160-4ff9-968b-7769ee8d8eac">
 		<InternalInfo>
-			<xr:PropertyState>
-				<xr:Property>Module</xr:Property>
-				<xr:State>Extended</xr:State>
-			</xr:PropertyState>
+			<xr:GeneratedType name="DefinedType.ДокументПартии" category="DefinedType">
+				<xr:TypeId>02d77f5c-18b6-448c-b5eb-b3e715e9c16a</xr:TypeId>
+				<xr:ValueId>2f69f557-bb31-4b92-acd2-40e5aa4de655</xr:ValueId>
+			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
 			<ObjectBelonging>Adopted</ObjectBelonging>
-			<Name>СтруктураСебестоимости</Name>
+			<Name>ДокументПартии</Name>
 			<Comment/>
-			<ExtendedConfigurationObject>c70e847b-73b3-4d64-a8cd-b5ce91901881</ExtendedConfigurationObject>
-			<Global>false</Global>
-			<ClientManagedApplication>false</ClientManagedApplication>
-			<Server>true</Server>
-			<ExternalConnection>true</ExternalConnection>
-			<ClientOrdinaryApplication>true</ClientOrdinaryApplication>
-			<ServerCall>false</ServerCall>
+			<ExtendedConfigurationObject>ccc7c8c2-38ce-487f-82bb-932854fef25f</ExtendedConfigurationObject>
+			<Type/>
 		</Properties>
-	</CommonModule>
+	</DefinedType>
 </MetaDataObject>
