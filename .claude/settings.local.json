@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell.exe -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' DESIGNER /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /LoadConfigFromFiles E:\\\\git\\\\ikon_fact_cost -Extension ikon_cost_Доработки\")",
+      "Bash(powershell.exe -Command \"Start-Sleep -Seconds 60\")",
+      "Bash(powershell.exe -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' DESIGNER /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /UpdateDBCfg -Extension ikon_cost_Доработки\")",
+      "mcp__gstai_mcp__execution_log",
+      "mcp__gstai_mcp__prod_cost_ext",
+      "mcp__gstai_mcp__prod_cost",
+      "Bash(dir:*)",
+      "mcp__1c-code-metadata-mcp__metadatasearch",
+      "mcp__1c-code-metadata-mcp__codesearch",
+      "Bash(powershell -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' DESIGNER /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /LoadConfigFromFiles E:\\\\git\\\\ikon_fact_cost -Extension ikon_cost_Доработки\")",
+      "Bash(powershell -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' DESIGNER /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /UpdateDBCfg -Extension ikon_cost_Доработки\")",
+      "Bash(git -C E:/git/ikon_fact_cost status --short)",
+      "mcp__1c-code-checker__check_1c_code",
+      "Bash(powershell.exe -NoProfile -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' DESIGNER /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /LoadConfigFromFiles E:\\\\git\\\\ikon_fact_cost -Extension ikon_cost_Доработки\")",
+      "Bash(powershell.exe -NoProfile -Command \"Start-Sleep -Seconds 60\")",
+      "Bash(powershell.exe -NoProfile -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' DESIGNER /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /UpdateDBCfg -Extension ikon_cost_Доработки\")",
+      "Bash(git diff:*)",
+      "Bash(python:*)",
+      "Bash(powershell:*)",
+      "Bash(sed:*)",
+      "Bash(awk:*)",
+      "Bash(python3:*)",
+      "Bash(cmd /c \"E:/git/ikon_fact_cost/insert_cache.bat\")",
+      "Bash(cmd /c \"dir /b E:\\\\git\\\\ikon_fact_cost\\\\CommonModules\\\\СтруктураСебестоимости\\\\Ext\\\\Module.bsl\")",
+      "Bash(cscript:*)",
+      "Bash(cmd /c \"more +976 E:\\\\git\\\\ikon_fact_cost\\\\CommonModules\\\\СтруктураСебестоимости\\\\Ext\\\\Module.bsl\")",
+      "Bash(Select-String:*)",
+      "Bash(Out-File:*)",
+      "Bash(powershell.exe -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' ENTERPRISE /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /CStartCommand=execution_log;Дата=\\(2026-02-18\\) /DisableStartupDialogs /Execute\")",
+      "Bash(ls:*)"
+    ]
+  }
+}

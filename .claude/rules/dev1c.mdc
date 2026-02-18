@@ -1,0 +1,247 @@
+# 1C:ERP Extension - Multi-Agent Workflow
+
+## Overview
+
+The project uses a specialized multi-agent system for developing, testing, and analyzing the `ikon_cost_Доработки` extension for 1C:ERP.
+
+## Agents and Their Roles
+
+### 1c-architect (Architect)
+**File**: `.claude/agents/1c-architect.md`
+
+**Role**: Analyze requirements, define metadata structure, create technical specification.
+
+**Responsibilities**:
+- Analyze cost accounting algorithm requirements
+- Define metadata object structures and relationships
+- Create technical specification for implementation
+- Define key dimensions and resources for information registers
+
+**When to use**:
+- When receiving new functional requirements
+- When metadata structure changes are needed
+- When questions about data structure arise
+
+**Input**: Description of task/requirements
+
+**Output**: Technical specification with detailed changes
+
+---
+
+### programmer-1c (Programmer)
+**File**: `.claude/agents/programmer-1c.md`
+
+**Role**: Implement code changes in the cost accounting algorithm.
+
+**Responsibilities**:
+- Implement code in `CommonModules\СтруктураСебестоимости\Ext\Module.bsl`
+- Implement code in other extension modules
+- Update version number in `Configuration.xml`
+- Record version in event log messages
+
+**When to use**:
+- When technical specification from Architect is ready
+- When fixing code bugs
+- For simple fixes that don't require architectural analysis
+
+**Input**: Technical specification from Architect
+
+**Output**: Modified code, ready for deployment
+
+---
+
+### 1c-devops-deploy (DevOps)
+**File**: `.claude/agents/1c-devops-deploy.md`
+
+**Role**: Deploy changes to test database.
+
+**Responsibilities**:
+- Load configuration from files into test database
+- Update database structure
+- Check for absence of `ConfigExtensionApplyError` errors in event log
+- Clean up event log
+
+**When to use**:
+- After Programmer completes work
+- After any configuration changes
+- Before starting testing
+
+**Input**: Information from Programmer that code is ready for deployment
+
+**Output**: Confirmation of successful deployment (no ConfigExtensionApplyError errors)
+
+---
+
+### 1c-tester (Tester)
+**File**: `.claude/agents\1c-tester.md`
+
+**Role**: Run report validation and compare results with reference.
+
+**Responsibilities**:
+- Run `prod_cost_ext` report for new algorithm
+- Run `prod_cost` report for old algorithm (reference)
+- Compare results for correctness
+- Verify discrepancies are within acceptable tolerance (<0.01%)
+- Create test result file `test_results_vX.Y.Z.md`
+
+**Tools**:
+- `prod_cost_ext` - new algorithm (batch processing)
+- `prod_cost` - old algorithm (recursive, reference)
+
+**Test parameters**: Period from 01.01.2025 to 31.12.2025
+
+**When to use**:
+- After successful deployment from DevOps
+- When correctness verification is needed
+
+**Input**: Deployment confirmation from DevOps
+
+**Output**: Test results with correctness analysis
+
+---
+
+### 1c-analyst (Analyst)
+**File**: `.claude/agents/1c-analyst.md`
+
+**Role**: Deep analysis of correctness and performance of test results.
+
+**Responsibilities**:
+- Analyze test result files
+- Verify correctness of key metrics (cost, materials, overhead, etc.)
+- Verify discrepancies between new and old algorithms
+- Analyze performance (execution time)
+- Provide conclusion: SUCCESS or FAIL
+
+**Success criteria**:
+- Maximum discrepancy <0.01% (rounding tolerance)
+- All key metrics within acceptable tolerance
+- New algorithm significantly faster than old
+
+**When to use**:
+- After Tester completes work
+- When questions arise about test results
+
+**Input**: Test result file from Tester
+
+**Output**: Analysis with recommendations
+
+---
+
+## Workflow
+
+### Main Development Cycle
+
+```
+1. User → 1c-architect
+   ↓
+2. 1c-architect → programmer-1c
+   ↓
+3. programmer-1c → 1c-devops-deploy
+   ↓
+4. 1c-devops-deploy → 1c-tester
+   ↓
+5. 1c-tester → 1c-analyst
+   ↓
+6. 1c-analyst → User (conclusion)
+```
+
+### Bugfix Cycle
+
+```
+User → programmer-1c (simple fix)
+   ↓
+programmer-1c → 1c-devops-deploy
+   ↓
+1c-devops-deploy → 1c-tester
+   ↓
+1c-tester → 1c-analyst
+```
+
+## Commands for Working with Agents
+
+### Invoke architect
+```
+/architect
+```
+or
+```
+/architect <requirement description>
+```
+
+### Invoke programmer
+```
+/programmer
+```
+or
+```
+/programmer <specification link>
+```
+
+### Invoke DevOps for deployment
+```
+/devops
+```
+or
+```
+/devops deploy
+```
+
+### Invoke tester
+```
+/tester
+```
+or
+```
+/tester <period>
+```
+
+### Invoke analyst
+```
+/analyst
+```
+or
+```
+/analyst <test result file>
+```
+
+## Project Structure
+
+### Main Algorithm
+- `CommonModules/СтруктураСебестоимости/Ext\Module.bsl` - main module with algorithms
+
+### Caching System
+- `CommonModules/ikon_cost_КэшированиеРасчётов\Ext\Module.bsl` - caching functions
+- `InformationRegisters/ikon_cost_ДетализацияЗатратСебестоимости` - register for storing cache
+
+### Reports
+- `Reports/ikon_cost_ФактическаяСебестоимостьПродукции/Ext/ObjectModule.bsl` - optimized report
+- `ФСП/ФактическаяСебестоимостьПродукции/Ext/ObjectModule.bsl` - reference report (DO NOT MODIFY)
+
+### Versioning
+- `Configuration.xml` - extension version number
+- Version correspondence in event log messages
+
+## Key Principles
+
+### 1. Correctness
+- New algorithm results must match reference (within rounding tolerance)
+- Old algorithm (recursive) is the correctness standard
+
+### 2. Performance
+- New algorithm (batch processing) should be significantly faster than old
+- Solve N+1 query problem
+
+### 3. Root Product Data Preservation
+- CRITICAL: `ПартияПродукции` field on ALL levels must reference ROOT product
+- Using current level data when writing causes errors
+
+### 4. Cycle Protection
+- Detect cycles in product tree (counter releases)
+- Maximum recursion depth limit (50 levels)
+- Log detected cycles to event log
+- Statistics in `ПараметрыДерева.ОбнаруженныеЦиклы`
+
+### 5. Caching
+- Store calculation results in `ikon_cost_ДетализацияЗатратСебестоимости` register
+- Invalidate cache when algorithm version changes
+- Check for cache existence before full calculation

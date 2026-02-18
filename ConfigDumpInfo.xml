@@ -7,9 +7,11 @@
 		<Metadata name="Catalog.СерииНоменклатуры" id="f272480b-7687-43fc-9b67-ce83d250926c" configVersion="a6d92775773bb7c5ecfd04f75d9f4376002b610d"/>
 		<Metadata name="Catalog.СтруктураПредприятия" id="057855db-91c4-42fb-8178-ed094b1aa3e2" configVersion="95cf93345b8bb300e270b785509f169af6c87ec3"/>
 		<Metadata name="Catalog.ХарактеристикиНоменклатуры" id="acf6fa7e-9bc1-4524-89ba-eb1e5695c0b5" configVersion="36988472eea8311d618e430351a413d841512f6f"/>
+		<Metadata name="CommonModule.ikon_cost_КэшированиеРасчётов" id="f5b7ea9d-22c8-4d60-90e9-0ea1a6750224" configVersion="ef68e5385326af9578bf287c1bb73d0cad4ee2e5"/>
+		<Metadata name="CommonModule.ikon_cost_КэшированиеРасчётов.Module" id="f5b7ea9d-22c8-4d60-90e9-0ea1a6750224.0" configVersion="aecdb700d7881314494546cf448a01e8bc68bbae"/>
 		<Metadata name="CommonModule.СтруктураСебестоимости" id="c8ae5763-d013-4b83-8201-61a351df980c" configVersion="9d03d55df3254ccbefa125b5dead5ab62e59c73b"/>
 		<Metadata name="CommonModule.СтруктураСебестоимости.Module" id="c8ae5763-d013-4b83-8201-61a351df980c.0" configVersion="e672cb5c375a613423e41f1585b1b03fd767b192"/>
-		<Metadata name="Configuration.ikon_cost_Доработки" id="0e764b4b-998f-44e8-924f-ffa8ee202e95" configVersion="847835fc4474b4520e1ac4fe745a5d9fcc8baaa8"/>
+		<Metadata name="Configuration.ikon_cost_Доработки" id="0e764b4b-998f-44e8-924f-ffa8ee202e95" configVersion="e88bbfc6fc344f5932340a8e8e02b0d5abef8b1c"/>
 		<Metadata name="DefinedType.ДенежнаяСуммаЛюбогоЗнака" id="5a58149c-7f51-403d-907d-5f1ae5b55feb" configVersion="8f6fc8b7876c32135c3f12a920b259fb75962fa8"/>
 		<Metadata name="DefinedType.ДокументПартии" id="e334de61-d160-4ff9-968b-7769ee8d8eac" configVersion="1e6110fff3e3494573d727da11605d711e5baf12"/>
 		<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости" id="e9e41305-00ca-42b0-9e94-e93957b66efc" configVersion="231124888b7afe92c45c4236100ee19be0c77974">
