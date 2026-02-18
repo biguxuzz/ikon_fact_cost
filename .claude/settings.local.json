@@ -30,7 +30,10 @@
       "Bash(Select-String:*)",
       "Bash(Out-File:*)",
       "Bash(powershell.exe -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' ENTERPRISE /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /CStartCommand=execution_log;Дата=\\(2026-02-18\\) /DisableStartupDialogs /Execute\")",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Skill(glm-plan-usage:usage-query-skill)",
+      "Bash(/opt/1cv8/x86_64/8.3.27.1936/1cv8s:*)",
+      "mcp__1c-code-metadata-mcp__helpsearch"
     ]
   }
 }

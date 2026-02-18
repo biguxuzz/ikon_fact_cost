@@ -4,6 +4,33 @@
 
 The project uses a specialized multi-agent system for developing, testing, and analyzing the `ikon_cost_Доработки` extension for 1C:ERP.
 
+## CRITICAL: Platform Interaction Rules
+
+**ALL AGENTS (except DevOps) are ABSOLUTELY FORBIDDEN from calling the 1C platform directly.**
+- NEVER attempt to execute 1C code directly
+- NEVER attempt to run the 1C platform (1cv8, 1cv8s, or any other 1C executable)
+- NEVER attempt to connect to 1C database directly
+
+**ONLY DevOps agent is allowed to interact with 1C platform, and ONLY for deployment operations.**
+
+**All 1C interaction MUST use MCP tools:**
+
+### MCP gstai_mcp Tools (for testing and deployment verification)
+- `mcp__gstai_mcp__execution_log` - Check event log
+- `mcp__gstai_mcp__prod_cost` - Run old algorithm report (reference)
+- `mcp__gstai_mcp__prod_cost_ext` - Run new algorithm report (batch processing)
+
+### MCP 1c-code-metadata-mcp Tools (for metadata understanding)
+- `mcp__1c-code-metadata-mcp__metadatasearch` - Search for metadata objects, fields, types
+- `mcp__1c-code-metadata-mcp__codesearch` - Search for 1C code in modules
+- `mcp__1c-code-metadata-mcp__helpsearch` - Search for metadata object descriptions
+
+## IMPORTANT: Folder Structure
+
+**Agent definitions are located in `.claude/agents/` folder.**
+- `.cursor/` folder MUST be completely ignored
+- All agent work uses `.claude/agents/` definitions only
+
 ## Agents and Their Roles
 
 ### 1c-architect (Architect)
@@ -16,6 +43,8 @@ The project uses a specialized multi-agent system for developing, testing, and a
 - Define metadata object structures and relationships
 - Create technical specification for implementation
 - Define key dimensions and resources for information registers
+- **FORBIDDEN from calling 1C platform directly**
+- Uses MCP tools to understand metadata structure
 
 **When to use**:
 - When receiving new functional requirements
@@ -38,6 +67,9 @@ The project uses a specialized multi-agent system for developing, testing, and a
 - Implement code in other extension modules
 - Update version number in `Configuration.xml`
 - Record version in event log messages
+- **FORBIDDEN from calling 1C platform directly**
+- Uses Read/Edit/Write tools for code files
+- Uses MCP tools to understand metadata
 
 **When to use**:
 - When technical specification from Architect is ready
@@ -60,6 +92,9 @@ The project uses a specialized multi-agent system for developing, testing, and a
 - Update database structure
 - Check for absence of `ConfigExtensionApplyError` errors in event log
 - Clean up event log
+- **ONLY AGENT ALLOWED to call 1C platform directly**
+- Uses Bash tool to execute deployment commands
+- Uses `mcp__gstai_mcp__execution_log` to verify deployment
 
 **When to use**:
 - After Programmer completes work
@@ -73,20 +108,19 @@ The project uses a specialized multi-agent system for developing, testing, and a
 ---
 
 ### 1c-tester (Tester)
-**File**: `.claude/agents\1c-tester.md`
+**File**: `.claude/agents/1c-tester.md`
 
 **Role**: Run report validation and compare results with reference.
 
 **Responsibilities**:
-- Run `prod_cost_ext` report for new algorithm
-- Run `prod_cost` report for old algorithm (reference)
+- Run `prod_cost_ext` report for new algorithm using `mcp__gstai_mcp__prod_cost_ext`
+- Run `prod_cost` report for old algorithm (reference) using `mcp__gstai_mcp__prod_cost`
+- Check event log using `mcp__gstai_mcp__execution_log`
 - Compare results for correctness
 - Verify discrepancies are within acceptable tolerance (<0.01%)
 - Create test result file `test_results_vX.Y.Z.md`
-
-**Tools**:
-- `prod_cost_ext` - new algorithm (batch processing)
-- `prod_cost` - old algorithm (recursive, reference)
+- **FORBIDDEN from calling 1C platform directly**
+- Uses ONLY MCP gstai_mcp tools for testing
 
 **Test parameters**: Period from 01.01.2025 to 31.12.2025
 
@@ -111,6 +145,9 @@ The project uses a specialized multi-agent system for developing, testing, and a
 - Verify discrepancies between new and old algorithms
 - Analyze performance (execution time)
 - Provide conclusion: SUCCESS or FAIL
+- **FORBIDDEN from calling 1C platform directly**
+- Uses Read tool to analyze code and test results
+- Uses MCP tools to understand metadata
 
 **Success criteria**:
 - Maximum discrepancy <0.01% (rounding tolerance)
@@ -207,10 +244,10 @@ or
 ## Project Structure
 
 ### Main Algorithm
-- `CommonModules/СтруктураСебестоимости/Ext\Module.bsl` - main module with algorithms
+- `CommonModules/СтруктураСебестоимости/Ext/Module.bsl` - main module with algorithms
 
 ### Caching System
-- `CommonModules/ikon_cost_КэшированиеРасчётов\Ext\Module.bsl` - caching functions
+- `CommonModules/ikon_cost_КэшированиеРасчётов/Ext/Module.bsl` - caching functions
 - `InformationRegisters/ikon_cost_ДетализацияЗатратСебестоимости` - register for storing cache
 
 ### Reports
@@ -245,3 +282,47 @@ or
 - Store calculation results in `ikon_cost_ДетализацияЗатратСебестоимости` register
 - Invalidate cache when algorithm version changes
 - Check for cache existence before full calculation
+
+## MCP Tools Reference
+
+### For Testing (Tester Agent Only)
+1. **mcp__gstai_mcp__prod_cost_ext(startDate, endDate)**
+   - Run new algorithm report
+   - startDate: YYYY-MM-DD format
+   - endDate: YYYY-MM-DD format
+
+2. **mcp__gstai_mcp__prod_cost(startDate, endDate)**
+   - Run reference report (old algorithm)
+   - startDate: YYYY-MM-DD format
+   - endDate: YYYY-MM-DD format
+
+3. **mcp__gstai_mcp__execution_log(startDate, endDate)**
+   - Check event log for errors
+   - startDate: ISO 8601 format YYYY-MM-DDTHH:MM:SS
+   - endDate: ISO 8601 format YYYY-MM-DDTHH:MM:SS
+   - Note: Event log has +2 hour offset
+
+### For Metadata Understanding (Architect, Programmer, Analyst)
+1. **mcp__1c-code-metadata-mcp__metadatasearch(query, limit)**
+   - Search for metadata objects, fields, types
+   - query: object name or description
+   - limit: number of results
+
+2. **mcp__1c-code-metadata-mcp__codesearch(query, limit)**
+   - Search for 1C code in modules
+   - query: code fragment or function name
+   - limit: number of results
+
+3. **mcp__1c-code-metadata-mcp__helpsearch(query, limit)**
+   - Search for metadata object descriptions
+   - query: object description
+   - limit: number of results
+
+### For Deployment (DevOps Agent Only)
+1. **Bash tool**
+   - Execute 1C platform commands for deployment
+   - LoadConfigFromFiles, UpdateDBCfg, ReduceEventLogSize
+
+2. **mcp__gstai_mcp__execution_log(startDate, endDate)**
+   - Verify deployment success
+   - Check for ConfigExtensionApplyError events
