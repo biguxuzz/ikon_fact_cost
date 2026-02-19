@@ -69,6 +69,7 @@
 			<CommonModule>СтруктураСебестоимости</CommonModule>
 			<CommonModule>ikon_cost_КэшированиеРасчётов</CommonModule>
 			<CommonModule>ikon_cost_СтруктураСебестоимостиФоновый</CommonModule>
+			<CommonModule>ikon_cost_СтруктураСебестоимостиСлужебныйЗапросы</CommonModule>
 			<DefinedType>ДокументПартии</DefinedType>
 			<DefinedType>ДенежнаяСуммаЛюбогоЗнака</DefinedType>
 			<Catalog>Организации</Catalog>
