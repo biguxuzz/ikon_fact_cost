@@ -6,6 +6,7 @@
 		<IndexedFields>
 			<Field>Period</Field>
 			<Field>Организация</Field>
+			<Field>АналитикаУчетаПродукции</Field>
 			<Field>ПартияПродукции</Field>
 			<Field>АналитикаУчетаПартийПродукции</Field>
 		</IndexedFields>
