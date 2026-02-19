@@ -68,6 +68,7 @@
 			<Role>ikon_cost_ОсновнаяРоль</Role>
 			<CommonModule>СтруктураСебестоимости</CommonModule>
 			<CommonModule>ikon_cost_КэшированиеРасчётов</CommonModule>
+			<CommonModule>ikon_cost_СтруктураСебестоимостиФоновый</CommonModule>
 			<DefinedType>ДокументПартии</DefinedType>
 			<DefinedType>ДенежнаяСуммаЛюбогоЗнака</DefinedType>
 			<Catalog>Организации</Catalog>
