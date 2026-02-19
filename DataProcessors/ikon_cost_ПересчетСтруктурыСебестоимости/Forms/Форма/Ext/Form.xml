@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗапуститьРасчет" id="32">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗапуститьРасчет</CommandName>
+				<ExtendedTooltip name="ФормаЗапуститьРасчетРасширеннаяПодсказка" id="33"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Объект.Период</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="КоличествоПотоков" id="4">
+			<DataPath>Объект.КоличествоПотоков</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КоличествоПотоковКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КоличествоПотоковРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="Прогресс" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Прогресс</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПрогрессКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ПрогрессКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ПрогрессРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ПрогрессСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>Прогресс</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПрогрессСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПрогрессСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПрогрессСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>Прогресс</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПрогрессСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПрогрессСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПрогрессУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>Прогресс</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПрогрессУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ПрогрессУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПрогрессНомерСтроки" id="20">
+					<DataPath>Объект.Прогресс.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПрогрессНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПрогрессНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ПрогрессНоменклатура" id="23">
+					<DataPath>Объект.Прогресс.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПрогрессНоменклатураКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПрогрессНоменклатураРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<CheckBoxField name="ПрогрессРасчитано" id="26">
+					<DataPath>Объект.Прогресс.Расчитано</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрогрессРасчитаноКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПрогрессРасчитаноРасширеннаяПодсказка" id="28"/>
+				</CheckBoxField>
+				<InputField name="ПрогрессДлительностьРасчета" id="29">
+					<DataPath>Объект.Прогресс.ДлительностьРасчета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПрогрессДлительностьРасчетаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПрогрессДлительностьРасчетаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ikon_cost_ПересчетСтруктурыСебестоимости</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗапуститьРасчет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить расчет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить расчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьРасчет</Action>
+		</Command>
+	</Commands>
+</Form>
