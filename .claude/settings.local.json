@@ -33,7 +33,11 @@
       "Bash(ls:*)",
       "Skill(glm-plan-usage:usage-query-skill)",
       "Bash(/opt/1cv8/x86_64/8.3.27.1936/1cv8s:*)",
-      "mcp__1c-code-metadata-mcp__helpsearch"
+      "mcp__1c-code-metadata-mcp__helpsearch",
+      "Bash(claude-code:*)",
+      "Bash(/tmp/transfer_functions.sh:*)",
+      "Bash(chmod:*)",
+      "Bash(/tmp/replace_stubs.sh:*)"
     ]
   }
 }
