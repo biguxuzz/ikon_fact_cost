@@ -10,7 +10,7 @@
 		<Metadata name="Catalog.ХарактеристикиНоменклатуры" id="acf6fa7e-9bc1-4524-89ba-eb1e5695c0b5" configVersion="36988472eea8311d618e430351a413d841512f6f"/>
 		<Metadata name="ChartOfCharacteristicTypes.СтатьиРасходов" id="edda95ef-d969-4dac-9b95-5ca171172d72" configVersion="42cd22de509b61dc3dcdf2c4633411d564bd017d"/>
 		<Metadata name="CommonModule.ikon_cost_КэшированиеРасчётов" id="f5b7ea9d-22c8-4d60-90e9-0ea1a6750224" configVersion="ef68e5385326af9578bf287c1bb73d0cad4ee2e5"/>
-		<Metadata name="CommonModule.ikon_cost_КэшированиеРасчётов.Module" id="f5b7ea9d-22c8-4d60-90e9-0ea1a6750224.0" configVersion="50fd0bf296c742fcb1c9098ef83af208852cb010"/>
+		<Metadata name="CommonModule.ikon_cost_КэшированиеРасчётов.Module" id="f5b7ea9d-22c8-4d60-90e9-0ea1a6750224.0" configVersion="3a87d8d8427985affbf2f5794ed861d7100a807b"/>
 		<Metadata name="CommonModule.ikon_cost_СтруктураСебестоимостиСлужебныйЗапросы" id="566425d2-1266-4a14-ad3d-76c5637d5e82" configVersion="d6b8462cff20718e09aa87c9cd107504565470bf"/>
 		<Metadata name="CommonModule.ikon_cost_СтруктураСебестоимостиСлужебныйЗапросы.Module" id="566425d2-1266-4a14-ad3d-76c5637d5e82.0" configVersion="d6be313c3a98782b4b7e8716e072173859fdd325"/>
 		<Metadata name="CommonModule.ikon_cost_СтруктураСебестоимостиФоновый" id="5ba607a6-db87-4b2a-8829-6126b5fa6fee" configVersion="8fe1e10fb71c24c0c2deac8e17e1fd8b310dfd23"/>
