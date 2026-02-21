@@ -37,7 +37,9 @@
       "Bash(claude-code:*)",
       "Bash(/tmp/transfer_functions.sh:*)",
       "Bash(chmod:*)",
-      "Bash(/tmp/replace_stubs.sh:*)"
+      "Bash(/tmp/replace_stubs.sh:*)",
+      "Bash(powershell.exe -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' DESIGNER /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /LoadConfigFromFiles E:\\\\git\\\\ikon_fact_cost -Extension ikon_cost_Доработки; Start-Sleep -Seconds 60; & ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' DESIGNER /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /UpdateDBCfg -Extension ikon_cost_Доработки; Start-Sleep -Seconds 60\")",
+      "Bash(powershell.exe -Command \"& ''C:\\\\Program Files\\\\1cv8\\\\8.3.27.1936\\\\bin\\\\1cv8.exe'' DESIGNER /S PGORODILOV.WSL/TEST_ERP_BRZ_01 /NAdmin /ReduceEventLogSize ''2026-02-23''; Start-Sleep -Seconds 60\")"
     ]
   }
 }
