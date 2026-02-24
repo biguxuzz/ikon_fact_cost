@@ -29,6 +29,19 @@
 			<Comment/>
 			<ExtendedConfigurationObject>fc59acc3-f1f7-4e3f-96da-e580f2c5a88f</ExtendedConfigurationObject>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Attribute uuid="773dcf6d-d05a-44d4-afe8-cdcba58bb36c">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ikon_КатегорияПродукта</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>6834ae85-cffa-4448-ac17-938ccfb869d7</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ikon_КатегорииПродуктов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

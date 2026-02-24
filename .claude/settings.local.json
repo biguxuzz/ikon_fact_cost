@@ -54,7 +54,9 @@
       "Bash(bash -x /mnt/e/git/ikon_fact_cost/deploy.sh)",
       "Bash(tree:*)",
       "Bash(bash deploy.sh)",
-      "Bash(bash -c 'source deploy.sh; echo \"\"Version: $VERSION\"\"')"
+      "Bash(bash -c 'source deploy.sh; echo \"\"Version: $VERSION\"\"')",
+      "Bash(/mnt/e/git/ikon_fact_cost/.docs/arch/TECH_SPEC_ВЕРСИЯ_0.1.1.278.md:*)",
+      "Bash(/mnt/e/git/ikon_fact_cost/.docs/arch/TECH_SPEC_0.1.1.278.md:*)"
     ]
   }
 }

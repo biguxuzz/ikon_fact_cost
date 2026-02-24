@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Catalog uuid="c42a1fff-8ba1-4594-8b60-7972aff091d4">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.ikon_КатегорииПродуктов" category="Object">
+				<xr:TypeId>58e95a26-ed79-4c46-a5f5-9db0e99f9920</xr:TypeId>
+				<xr:ValueId>f663cbab-9e03-46d4-9729-331f6ba93819</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.ikon_КатегорииПродуктов" category="Ref">
+				<xr:TypeId>a1522078-a61e-4985-81a2-506a8fb6df8e</xr:TypeId>
+				<xr:ValueId>815bde0d-078f-4655-8726-44141cba4a23</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.ikon_КатегорииПродуктов" category="Selection">
+				<xr:TypeId>1e76f9d8-930e-4b7b-8069-f8b6510f2f95</xr:TypeId>
+				<xr:ValueId>9a1272dc-2c15-40bc-a885-02c263cf420b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.ikon_КатегорииПродуктов" category="List">
+				<xr:TypeId>86e26cd1-09cb-4b75-9903-d8c5b9cda9a2</xr:TypeId>
+				<xr:ValueId>b8fd8187-8516-4dc9-a051-649f2d7e91e0</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.ikon_КатегорииПродуктов" category="Manager">
+				<xr:TypeId>f53561a3-b28a-457e-8f7c-92305f2f2e65</xr:TypeId>
+				<xr:ValueId>3d55623f-3391-483d-94f0-408eee32b29f</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>ikon_КатегорииПродуктов</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>83518849-9848-4514-9b84-3add82914c92</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects/>
+	</Catalog>
+</MetaDataObject>
