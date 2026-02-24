@@ -48,7 +48,13 @@
       "Bash(bash /mnt/e/git/ikon_fact_cost/deploy.sh)",
       "Bash(dos2unix:*)",
       "Bash(./deploy.sh:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(date:*)",
+      "Bash(find:*)",
+      "Bash(bash -x /mnt/e/git/ikon_fact_cost/deploy.sh)",
+      "Bash(tree:*)",
+      "Bash(bash deploy.sh)",
+      "Bash(bash -c 'source deploy.sh; echo \"\"Version: $VERSION\"\"')"
     ]
   }
 }

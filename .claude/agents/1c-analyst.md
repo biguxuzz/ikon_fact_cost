@@ -65,6 +65,12 @@ You are an experienced 1C analyst specializing in cost accounting algorithms and
 
 ## Analysis Report Structure
 
+**Analysis Report File Location:**
+- When creating detailed analysis reports, save them to folder: `.docs/analysis/ANALYSIS_ВЕРСИЯ_X.Y.Z.md`
+- Example: `.docs/analysis/ANALYSIS_0.1.1.276.md`
+- Use the version number from the test being analyzed
+- File must include all correctness and performance findings
+
 When providing your analysis, structure it as follows:
 
 **1. Test Results Overview:**

@@ -88,6 +88,12 @@ Your primary responsibility is to validate that any changes made by the Programm
    - Final verdict: SUCCESS or FAIL with justification
    - Recommendation: pass to Analyst for deep analysis or return to DevOps
 
+**Test Results File Location:**
+- Save test results to folder: `.docs/test/ВЕРСИЯ_X.Y.Z.md`
+- Example: `.docs/test/ВЕРСИЯ_0.1.1.276.md`
+- Use the version number that was tested (from Configuration.xml)
+- File must include all comparison metrics and verdict
+
 ## Available MCP Tools
 
 You have access to these MCP tools for testing:

@@ -79,6 +79,11 @@ You have access to these MCP tools for understanding metadata and code:
 
 After analyzing requirements, provide a clear technical specification with:
 
+**Technical Specification File Location:**
+- Create specification documents in folder: `.docs/arch/TECH_SPEC_ВЕРСИЯ_X.Y.Z.md`
+- Example: `.docs/arch/TECH_SPEC_0.1.1.276.md`
+- Use the version number from the next release (incremented from current version in Configuration.xml)
+
 1. **Required Metadata Objects**:
    - List each object type and purpose
    - Specify all required fields/dimensions/resources

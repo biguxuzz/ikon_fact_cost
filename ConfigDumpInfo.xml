@@ -10,14 +10,14 @@
 		<Metadata name="Catalog.ХарактеристикиНоменклатуры" id="acf6fa7e-9bc1-4524-89ba-eb1e5695c0b5" configVersion="36988472eea8311d618e430351a413d841512f6f"/>
 		<Metadata name="ChartOfCharacteristicTypes.СтатьиРасходов" id="edda95ef-d969-4dac-9b95-5ca171172d72" configVersion="42cd22de509b61dc3dcdf2c4633411d564bd017d"/>
 		<Metadata name="CommonModule.ikon_cost_КэшированиеРасчётов" id="f5b7ea9d-22c8-4d60-90e9-0ea1a6750224" configVersion="ef68e5385326af9578bf287c1bb73d0cad4ee2e5"/>
-		<Metadata name="CommonModule.ikon_cost_КэшированиеРасчётов.Module" id="f5b7ea9d-22c8-4d60-90e9-0ea1a6750224.0" configVersion="341bab3414b2e9ed1ef444d014e6a8ee2714adc4"/>
+		<Metadata name="CommonModule.ikon_cost_КэшированиеРасчётов.Module" id="f5b7ea9d-22c8-4d60-90e9-0ea1a6750224.0" configVersion="12de2fa3d45e3b8ba186b790405ab9ada017cc54"/>
 		<Metadata name="CommonModule.ikon_cost_СтруктураСебестоимостиСлужебныйЗапросы" id="566425d2-1266-4a14-ad3d-76c5637d5e82" configVersion="d6b8462cff20718e09aa87c9cd107504565470bf"/>
-		<Metadata name="CommonModule.ikon_cost_СтруктураСебестоимостиСлужебныйЗапросы.Module" id="566425d2-1266-4a14-ad3d-76c5637d5e82.0" configVersion="c124213491da9adb49ca9361698ba78c86e77224"/>
+		<Metadata name="CommonModule.ikon_cost_СтруктураСебестоимостиСлужебныйЗапросы.Module" id="566425d2-1266-4a14-ad3d-76c5637d5e82.0" configVersion="0121424bca8feca1e2bc07189a1797b84546e3df"/>
 		<Metadata name="CommonModule.ikon_cost_СтруктураСебестоимостиФоновый" id="5ba607a6-db87-4b2a-8829-6126b5fa6fee" configVersion="8fe1e10fb71c24c0c2deac8e17e1fd8b310dfd23"/>
-		<Metadata name="CommonModule.ikon_cost_СтруктураСебестоимостиФоновый.Module" id="5ba607a6-db87-4b2a-8829-6126b5fa6fee.0" configVersion="1058b8a179672f00b1f009b90fc8b8b888fa4f88"/>
-		<Metadata name="CommonModule.СтруктураСебестоимости" id="c8ae5763-d013-4b83-8201-61a351df980c" configVersion="b7216ebdc8439f893a32256831a678e3ddbb7f29"/>
-		<Metadata name="CommonModule.СтруктураСебестоимости.Module" id="c8ae5763-d013-4b83-8201-61a351df980c.0" configVersion="f24df3cad3b09b7015fd644ed3de8d3908f06bd2"/>
-		<Metadata name="Configuration.ikon_cost_Доработки" id="0e764b4b-998f-44e8-924f-ffa8ee202e95" configVersion="2637d10415315d3f0a64a80675917082639290e9"/>
+		<Metadata name="CommonModule.ikon_cost_СтруктураСебестоимостиФоновый.Module" id="5ba607a6-db87-4b2a-8829-6126b5fa6fee.0" configVersion="1af253674c3a592b3a598796a8bc519fce268e18"/>
+		<Metadata name="CommonModule.СтруктураСебестоимости" id="c8ae5763-d013-4b83-8201-61a351df980c" configVersion="0b2ebc861274d0dd7458fb0c96e954e36f854ad0"/>
+		<Metadata name="CommonModule.СтруктураСебестоимости.Module" id="c8ae5763-d013-4b83-8201-61a351df980c.0" configVersion="31f6c56b69f9994dd68469a86132ba958dcdb5d0"/>
+		<Metadata name="Configuration.ikon_cost_Доработки" id="0e764b4b-998f-44e8-924f-ffa8ee202e95" configVersion="6b1812a22e36f4c957c342065c497852d521222a"/>
 		<Metadata name="DataProcessor.ikon_cost_ПересчетСтруктурыСебестоимости" id="abb3b2ef-c494-434f-a64a-2acf2ac915aa" configVersion="6deb2bc0ba2c338f1ed4cecf8a3ff6e1f88bcaf2">
 			<Metadata name="DataProcessor.ikon_cost_ПересчетСтруктурыСебестоимости.TabularSection.Прогресс.Attribute.ДлительностьРасчета" id="0b885e96-100f-497f-a203-55299df40e92"/>
 			<Metadata name="DataProcessor.ikon_cost_ПересчетСтруктурыСебестоимости.TabularSection.Прогресс.Attribute.Номенклатура" id="44ce9e88-fd9c-4f0d-a738-efeaf7d6c323"/>
@@ -28,9 +28,14 @@
 			<Metadata name="DataProcessor.ikon_cost_ПересчетСтруктурыСебестоимости.Attribute.Пересчитать" id="bb09a373-7b6c-483b-a4ac-8c3ec5015fa6"/>
 		</Metadata>
 		<Metadata name="DataProcessor.ikon_cost_ПересчетСтруктурыСебестоимости.Form.Форма" id="5e0306a4-d088-47a9-b36a-3eb7f5781706" configVersion="6da5e2a667becdbb115fc1d2dd00392754a8420b"/>
-		<Metadata name="DataProcessor.ikon_cost_ПересчетСтруктурыСебестоимости.Form.Форма.Form" id="5e0306a4-d088-47a9-b36a-3eb7f5781706.0" configVersion="e1f4a2945b4cc644bca81c972b5a8fe554ebf6c4"/>
-		<Metadata name="DefinedType.ДенежнаяСуммаЛюбогоЗнака" id="5a58149c-7f51-403d-907d-5f1ae5b55feb" configVersion="8f6fc8b7876c32135c3f12a920b259fb75962fa8"/>
-		<Metadata name="DefinedType.ДокументПартии" id="e334de61-d160-4ff9-968b-7769ee8d8eac" configVersion="1e6110fff3e3494573d727da11605d711e5baf12"/>
+		<Metadata name="DataProcessor.ikon_cost_ПересчетСтруктурыСебестоимости.Form.Форма.Form" id="5e0306a4-d088-47a9-b36a-3eb7f5781706.0" configVersion="5b25ec542974400264549f1533efed382968d970"/>
+		<Metadata name="DefinedType.ДенежнаяСуммаЛюбогоЗнака" id="5a58149c-7f51-403d-907d-5f1ae5b55feb" configVersion="3c9742d2b822a982f8398b5eb969702d94ca0dc0"/>
+		<Metadata name="DefinedType.ДокументПартии" id="e334de61-d160-4ff9-968b-7769ee8d8eac" configVersion="1f1ef00a9baa47901391438a8ed0621666c5aae8"/>
+		<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратЗамеры" id="7dd9a155-90d5-43ce-889f-6b03233ecc86" configVersion="b02aec2db5864035367c0448dcbcb2b2365554b5">
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратЗамеры.Attribute.ВерсияРасчёта" id="2e581bb6-5c2a-4d7a-933e-3596579b9243"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратЗамеры.Dimension.Номенклатура" id="478557dc-cb6b-4f03-8ea4-9c871c6eefa4"/>
+			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратЗамеры.Resource.ДлительностьРасчета" id="55c26b28-edae-4082-942a-ed8a44bc367e"/>
+		</Metadata>
 		<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости" id="e9e41305-00ca-42b0-9e94-e93957b66efc" configVersion="02809bff49dc3048ca56c0ed92d62760974e3ae8">
 			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Resource.ПостатейныеПостоянныеРегл" id="01aacff5-d735-45e8-b014-fb0256585d79"/>
 			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.Организация" id="04c4e965-77a1-4867-bb79-6c03f9585137"/>
@@ -84,13 +89,13 @@
 			<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.Dimension.ТипЗатрат" id="fe19cc8a-c44a-4924-8269-0482e3967c8a"/>
 		</Metadata>
 		<Metadata name="InformationRegister.ikon_cost_ДетализацияЗатратСебестоимости.AdditionalIndexes" id="e9e41305-00ca-42b0-9e94-e93957b66efc.3" configVersion="0489d23b75525e487512b8de43b087503a386258"/>
-		<Metadata name="Language.Русский" id="744ff905-5944-433b-b533-3e5e4229105c" configVersion="eb866ee931e3367471f4f2d0adb97b810cdcd13c"/>
+		<Metadata name="Language.Русский" id="744ff905-5944-433b-b533-3e5e4229105c" configVersion="cff813aa2b787b24474c0c43c1021ec0c8ad6097"/>
 		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции" id="1e9c1b59-9467-4009-b5c5-6ae7435db386" configVersion="8707c5f1cab141d461cdc1d3ea5046b163c960c2"/>
 		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.Help" id="1e9c1b59-9467-4009-b5c5-6ae7435db386.1" configVersion="83de161cb1b450b8d86de54b65b60bf91e283484"/>
-		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.ObjectModule" id="1e9c1b59-9467-4009-b5c5-6ae7435db386.0" configVersion="211e4df6a0b2c5fde752a3ae7d84aa004c1df8f8"/>
+		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.ObjectModule" id="1e9c1b59-9467-4009-b5c5-6ae7435db386.0" configVersion="23cfd2bde6e667de2a0fe147036fe314f18cc341"/>
 		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.Template.ОсновнаяСхемаКомпоновкиДанных" id="d0298b08-b4d4-4472-b50b-fdb5840b23d5" configVersion="c291157920c7759b5413db21385e6fea0c3b7d02"/>
 		<Metadata name="Report.ikon_cost_ФактическаяСебестоимостьПродукции.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="d0298b08-b4d4-4472-b50b-fdb5840b23d5.0" configVersion="2b489f421c3c22f47ee87f8b29f60382c0187e41"/>
 		<Metadata name="Role.ikon_cost_ОсновнаяРоль" id="0afda970-1e21-4b5e-9d17-c6abe7ac8485" configVersion="7682e92795c558f84d02360beb70a8f77deeb0ea"/>
-		<Metadata name="Role.ikon_cost_ОсновнаяРоль.Rights" id="0afda970-1e21-4b5e-9d17-c6abe7ac8485.0" configVersion="ed1aa32d89dd874aad2f15bdb97c4dbb441db7fc"/>
+		<Metadata name="Role.ikon_cost_ОсновнаяРоль.Rights" id="0afda970-1e21-4b5e-9d17-c6abe7ac8485.0" configVersion="7d0a5dae1b83dd695be4a55073cf03c95b952db1"/>
 	</ConfigVersions>
 </ConfigDumpInfo>

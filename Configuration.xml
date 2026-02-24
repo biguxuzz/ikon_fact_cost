@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ikon_cost_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>0.1.1.268</Version>
+			<Version>0.1.1.276</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -82,6 +82,7 @@
 			<Report>ikon_cost_ФактическаяСебестоимостьПродукции</Report>
 			<DataProcessor>ikon_cost_ПересчетСтруктурыСебестоимости</DataProcessor>
 			<InformationRegister>ikon_cost_ДетализацияЗатратСебестоимости</InformationRegister>
+			<InformationRegister>ikon_cost_ДетализацияЗатратЗамеры</InformationRegister>
 			<ChartOfCharacteristicTypes>СтатьиРасходов</ChartOfCharacteristicTypes>
 		</ChildObjects>
 	</Configuration>

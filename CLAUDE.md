@@ -4,10 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **1C:ERP configuration extension** named `ikon_cost_Доработки` that implements an **optimized cost accounting algorithm** to solve the N+1 query problem in the standard "Structure of Cost" algorithm. The project uses a batch processing approach that maintains correctness while dramatically improving performance for large datasets.
+This is a **1C:ERP configuration extension** named `ikon_cost_Доработки` that implements an **optimized cost accounting algorithm** to solve N+1 query problem in the standard "Structure of Cost" algorithm. The project uses a batch processing approach that maintains correctness while dramatically improving performance for large datasets.
 
 ### Current Version
-Version: 0.1.1.268
+Version: 0.1.1.276
 1C Platform: 8.3.27.1936
 Extension Mode: Customization (extends standard 1C:ERP)
 
@@ -43,8 +43,9 @@ The project uses a specialized multi-agent system defined in `.claude/rules/dev1
 
 ### Critical Platform Interaction Rule
 
-**ONLY the DevOps agent is allowed to interact with the 1C platform directly.**
+**ONLY** DevOps agent is allowed to interact with 1C platform, and ONLY through `deploy.sh` script.
 
+- **ABSOLUTELY FORBIDDEN**: Never call 1cv8, 1cv8s, LoadConfigFromFiles, UpdateDBCfg, ReduceEventLogSize, or DumpCfg directly
 - All other agents use **MCP tools** for 1C interaction:
   - `mcp__gstai_mcp__execution_log` - Check event log
   - `mcp__gstai_mcp__prod_cost` - Run reference report (old algorithm)
@@ -54,6 +55,23 @@ The project uses a specialized multi-agent system defined in `.claude/rules/dev1
   - `mcp__1c-code-metadata-mcp__helpsearch` - Search help
 
 For complete workflow rules, see **`.claude/rules/dev1c.mdc`** and agent definitions in **`.claude/agents/`**.
+
+### Production Deployment Ban
+
+**STRICTLY FORBIDDEN:**
+- Deployment to production database (PROD_ERP) is NOT ALLOWED under any circumstances
+- Only test database (TEST_ERP_BRZ_01) may be used for deployment
+- Production deployment requires official approval process
+- Never execute deployment commands on production systems
+
+**Allowed databases:**
+- TEST_ERP_BRZ_01 (test environment only)
+
+**Deployment Safety:**
+- ALL deployment operations must use `deploy.sh` script ONLY
+- `deploy.sh` performs: LoadConfigFromFiles, UpdateDBCfg, ReduceEventLogSize, DumpCfg
+- Script includes proper delays (60 seconds) between steps
+- Script order: Load → Update DB → Clean Log → Dump (for production artifact)
 
 ## Architecture
 
@@ -83,7 +101,7 @@ For complete workflow rules, see **`.claude/rules/dev1c.mdc`** and agent definit
    - Includes multiple helper functions for various cost types (material costs, labor, overhead, etc.)
    - All functions are server-side and exportable
 
-5. **Multi-threaded Recalculation Form**: `DataProcessors/ikon_cost_ПересчетСтруктурыСебестоимости/Forms/Форма/Ext/Form/Module.bsl`
+5. **Multi-threaded Recalculation Form**: `DataProcessors/ikon_cost_ПересчётСтруктурыСебестоимости/Forms/Форма/Ext/Form/Module.bsl`
    - Form for launching multi-threaded cost cache recalculation for selected period
    - Uses `ДлительныеОперации.ВыполнитьФункциюВНесколькоПотоков` for parallel processing
    - Splits nomenclature list into batches for parallel execution
@@ -91,8 +109,8 @@ For complete workflow rules, see **`.claude/rules/dev1c.mdc`** and agent definit
    - Shows execution progress and results summary
    - Functions:
      * `РазбитьМассивПоПачкам()` - Splits array into batches
-     * `НачатьРасчетНаСервере()` - Starts multi-threaded calculation
-     * `ЗавершениеРасчетаНаСервере()` - Processes calculation results
+     * `НачатьРасчётНаСервере()` - Starts multi-threaded calculation
+     * `ЗавершениеРасчётаНаСервере()` - Processes calculation results
 
 6. **Reporting Layer**:
    - Optimized report: `Reports/ikon_cost_ФактическаяСебестоимостьПродукции/Ext/ObjectModule.bsl`
@@ -140,7 +158,7 @@ Reports/
 └── ikon_cost_ФактическаяСебестоимостьПродукции/
     └── Ext/ObjectModule.bsl    # Optimized report
 DataProcessors/
-└── ikon_cost_ПересчетСтруктурыСебестоимости/
+└── ikon_cost_ПересчётСтруктурыСебестоимости/
     └── Forms/Форма/Ext/Form/Module.bsl  # Multi-threaded recalculation form
 ФСП/
 └── ФактическаяСебестоимостьПродукции/
@@ -148,6 +166,13 @@ DataProcessors/
 .claude/
 ├── agents/                     # Agent definitions (architect, programmer, devops, tester, analyst)
 └── rules/dev1c.mdc            # Workflow orchestration rules
+.docs/
+├── arch/                       # Technical specifications from Architect
+│   └── TECH_SPEC_ВЕРСИЯ_X.Y.Z.md
+├── test/                       # Test results from Tester
+│   └── ВЕРСИЯ_X.Y.Z.md
+└── analysis/                   # Analysis reports from Analyst
+    └── ANALYSIS_ВЕРСИЯ_X.Y.Z.md
 ```
 
 ## Development Rules
@@ -161,6 +186,7 @@ DataProcessors/
    - Record version in first event log message in `ikon_cost_ПараметрыУзлаСКэшем()` function
 6. **Event Log Monitoring**: No `_$Session$_.ConfigExtensionApplyError` events with 'Ошибка применения модуля ikon_cost_Доработки' comment
 7. **Platform Interaction**: Use `./deploy.sh` script for deployment, DevOps agent verifies via MCP tools
+8. **Production Ban**: NEVER deploy to production, only test database allowed
 
 ## Critical Implementation Details
 
@@ -176,7 +202,7 @@ This is why root product linkage is critical - materials on deep levels must lin
 
 ## Testing
 
-Test results are saved as `test_results_vX.Y.Z.md` files containing:
+Test results are saved in `.docs/test/ВЕРСИЯ_X.Y.Z.md` files containing:
 - Comparison of key metrics (cost, material costs, additional expenses, fixed costs, tax accounting)
 - Detailed line-by-line comparison of significant cost items
 - Maximum and average discrepancies (must be within rounding tolerance)
@@ -192,7 +218,7 @@ Acceptable discrepancy: <0.01% (rounding tolerance)
 
 ## Version History Documentation
 
-Each version change is documented in `__ВЕРСИЯ_X.Y.Z.md` files showing:
+Each version change is documented in `.docs/arch/TECH_SPEC_ВЕРСИЯ_X.Y.Z.md` files showing:
 - Configuration.xml version change
 - Module.bsl event log message update
 - Specific changes made
@@ -230,7 +256,7 @@ mcp__gstai_mcp__execution_log(startDate="2026-02-21T00:00:00", endDate="2026-02-
 ### MCP Tools for Metadata Understanding
 ```python
 # Search for metadata objects
-mcp__1c-code-metadata-mcp__metadatasearch(query="Справочники.Номенклатура")
+mcp__1c-code-metadata-mcp__metadatasearch(query="Справочники.Номенклатура.Реквизиты")
 
 # Search for code
 mcp__1c-code-metadata-mcp__codesearch(query="ikon_cost_ПараметрыУзлаСКэшем")
@@ -238,3 +264,17 @@ mcp__1c-code-metadata-mcp__codesearch(query="ikon_cost_ПараметрыУзл�
 # Search for help
 mcp__1c-code-metadata-mcp__helpsearch(query="Себестоимость")
 ```
+
+### Deployment
+```bash
+cd /mnt/e/git/ikon_fact_cost
+bash deploy.sh
+```
+
+Deploy script automatically:
+- Reads version from Configuration.xml
+- Loads configuration from files
+- Updates database structure
+- Cleans event log
+- Dumps extension to file (production artifact)
+- Includes 60-second delays between steps

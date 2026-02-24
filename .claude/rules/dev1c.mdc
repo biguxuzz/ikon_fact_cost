@@ -11,7 +11,7 @@ The project uses a specialized multi-agent system for developing, testing, and a
 - NEVER attempt to run the 1C platform (1cv8, 1cv8s, or any other 1C executable)
 - NEVER attempt to connect to 1C database directly
 
-**ONLY DevOps agent is allowed to interact with 1C platform, and ONLY for deployment operations.**
+**ONLY DevOps agent is allowed to interact with 1C platform, and ONLY through deploy.sh script.**
 
 **All 1C interaction MUST use MCP tools:**
 
@@ -88,13 +88,15 @@ The project uses a specialized multi-agent system for developing, testing, and a
 **Role**: Deploy changes to test database.
 
 **Responsibilities**:
-- Load configuration from files into test database
-- Update database structure
+- Execute `deploy.sh` script which performs:
+  - Load configuration from files into test database
+  - Update database structure
+  - Clean up event log
+  - Dump extension to file for production deployment
 - Check for absence of `ConfigExtensionApplyError` errors in event log
-- Clean up event log
-- **ONLY AGENT ALLOWED to call 1C platform directly**
-- Uses Bash tool to execute deployment commands
+- **ONLY ALLOWED to use Bash tool to run deploy.sh script**
 - Uses `mcp__gstai_mcp__execution_log` to verify deployment
+- **ABSOLUTELY FORBIDDEN from calling 1C platform directly**
 
 **When to use**:
 - After Programmer completes work
@@ -118,7 +120,7 @@ The project uses a specialized multi-agent system for developing, testing, and a
 - Check event log using `mcp__gstai_mcp__execution_log`
 - Compare results for correctness
 - Verify discrepancies are within acceptable tolerance (<0.01%)
-- Create test result file `test_results_vX.Y.Z.md`
+- Create test result file in `.docs/test/ВЕРСИЯ_X.Y.Z.md`
 - **FORBIDDEN from calling 1C platform directly**
 - Uses ONLY MCP gstai_mcp tools for testing
 
@@ -258,6 +260,11 @@ or
 - `Configuration.xml` - extension version number
 - Version correspondence in event log messages
 
+### Documentation
+- `.docs/arch/` - Technical specifications from Architect
+- `.docs/test/` - Test results from Tester
+- `.docs/analysis/` - Analysis reports from Analyst
+
 ## Key Principles
 
 ### 1. Correctness
@@ -282,6 +289,11 @@ or
 - Store calculation results in `ikon_cost_ДетализацияЗатратСебестоимости` register
 - Invalidate cache when algorithm version changes
 - Check for cache existence before full calculation
+
+### 6. Deployment Safety
+- ALL deployment operations must use `deploy.sh` script
+- NO direct 1C platform calls (1cv8, 1cv8s) are allowed
+- deploy.sh performs all steps in correct order with proper delays
 
 ## MCP Tools Reference
 
@@ -320,8 +332,9 @@ or
 
 ### For Deployment (DevOps Agent Only)
 1. **Bash tool**
-   - Execute 1C platform commands for deployment
-   - LoadConfigFromFiles, UpdateDBCfg, ReduceEventLogSize
+   - Execute `deploy.sh` script ONLY
+   - deploy.sh handles: LoadConfigFromFiles, UpdateDBCfg, ReduceEventLogSize, DumpCfg
+   - Script includes proper delays and error handling
 
 2. **mcp__gstai_mcp__execution_log(startDate, endDate)**
    - Verify deployment success
