@@ -56,7 +56,11 @@
       "Bash(bash deploy.sh)",
       "Bash(bash -c 'source deploy.sh; echo \"\"Version: $VERSION\"\"')",
       "Bash(/mnt/e/git/ikon_fact_cost/.docs/arch/TECH_SPEC_ВЕРСИЯ_0.1.1.278.md:*)",
-      "Bash(/mnt/e/git/ikon_fact_cost/.docs/arch/TECH_SPEC_0.1.1.278.md:*)"
+      "Bash(/mnt/e/git/ikon_fact_cost/.docs/arch/TECH_SPEC_0.1.1.278.md:*)",
+      "Bash(claude mcp call:*)",
+      "Bash(grep:*)",
+      "Bash(claude --print \"Execute deployment of version 0.1.1.283 using deploy.sh script. The code fix for ПартииПродукции filter is ready but not deployed to the test database. After successful deployment, return to Tester for validation.\")",
+      "Bash(git show:*)"
     ]
   }
 }
