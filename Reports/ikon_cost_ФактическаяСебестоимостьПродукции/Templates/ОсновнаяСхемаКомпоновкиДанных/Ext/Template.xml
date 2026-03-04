@@ -19,6 +19,9 @@
 					<v8:content>Manufactured product</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ХарактеристикаПродукции</dataPath>
@@ -33,6 +36,9 @@
 					<v8:content>Manufactured product variant</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>НазначениеПродукции</dataPath>
@@ -47,6 +53,9 @@
 					<v8:content>Manufactured product assignment</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Назначения</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПартияПродукции</dataPath>
@@ -61,6 +70,9 @@
 					<v8:content>Product lot</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:TypeId>02d77f5c-18b6-448c-b5eb-b3e715e9c16a</v8:TypeId>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Полуфабрикат</dataPath>
@@ -75,6 +87,9 @@
 					<v8:content>Manufactured / Semi-finished product</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
 			<appearance>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
@@ -99,6 +114,9 @@
 					<v8:content>Manufactured / Semi-finished product variant</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Затрата</dataPath>
@@ -113,6 +131,9 @@
 					<v8:content>Cost</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ХарактеристикаЗатраты</dataPath>
@@ -127,6 +148,9 @@
 					<v8:content>Cost variant</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Стоимость</dataPath>
@@ -273,6 +297,9 @@
 					<v8:content>Company</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Организации</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Подразделение</dataPath>
@@ -287,6 +314,9 @@
 					<v8:content>Business unit</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.СтруктураПредприятия</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СтатьяКалькуляции</dataPath>
@@ -301,6 +331,9 @@
 					<v8:content>Product cost element</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.СтатьиКалькуляции</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Серия</dataPath>
@@ -389,6 +422,9 @@
 					<v8:content>Costs lot</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:TypeId>02d77f5c-18b6-448c-b5eb-b3e715e9c16a</v8:TypeId>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Уровень</dataPath>
@@ -905,6 +941,9 @@
 					<v8:content>Manufactured product</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ХарактеристикаПродукции</dataPath>
@@ -919,6 +958,9 @@
 					<v8:content>Manufactured product variant</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>НазначениеПродукции</dataPath>
@@ -933,6 +975,9 @@
 					<v8:content>Manufactured product assignment</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Назначения</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПартияПродукции</dataPath>
@@ -947,6 +992,9 @@
 					<v8:content>Product lot</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:TypeId>02d77f5c-18b6-448c-b5eb-b3e715e9c16a</v8:TypeId>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КоличествоВыпуск</dataPath>
@@ -983,6 +1031,9 @@
 					<v8:content>Semi-finished product</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ХарактеристикаПолуфабриката</dataPath>
@@ -997,6 +1048,9 @@
 					<v8:content>Manufactured / Semi-finished product variant</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Организация</dataPath>
@@ -1011,6 +1065,9 @@
 					<v8:content>Company</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Организации</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Валюта</dataPath>

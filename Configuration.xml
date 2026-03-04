@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ikon_cost_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>1.0.0.288</Version>
+			<Version>1.0.0.289</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -80,6 +80,8 @@
 			<Catalog>СтруктураПредприятия</Catalog>
 			<Catalog>КлючиАналитикиУчетаНоменклатуры</Catalog>
 			<Catalog>ikon_КатегорииПродуктов</Catalog>
+			<Catalog>Назначения</Catalog>
+			<Catalog>СтатьиКалькуляции</Catalog>
 			<Report>ikon_cost_ФактическаяСебестоимостьПродукции</Report>
 			<DataProcessor>ikon_cost_ПересчетСтруктурыСебестоимости</DataProcessor>
 			<InformationRegister>ikon_cost_ДетализацияЗатратСебестоимости</InformationRegister>
