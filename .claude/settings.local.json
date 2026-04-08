@@ -60,7 +60,13 @@
       "Bash(claude mcp call:*)",
       "Bash(grep:*)",
       "Bash(claude --print \"Execute deployment of version 0.1.1.283 using deploy.sh script. The code fix for ПартииПродукции filter is ready but not deployed to the test database. After successful deployment, return to Tester for validation.\")",
-      "Bash(git show:*)"
+      "Bash(git show:*)",
+      "mcp__zread__search_doc",
+      "mcp__zread__get_repo_structure",
+      "Bash(claude:*)",
+      "mcp__gstai_mcp__cost_plain",
+      "Bash(diffstat:*)",
+      "Bash(xxd:*)"
     ]
   }
 }
