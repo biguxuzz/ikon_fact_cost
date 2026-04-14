@@ -31,6 +31,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.ikon_cost_ФактическаяСебестоимостьПродукции</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ikon_cost_ДетализацияЗатратЗамеры</name>
 		<right>
 			<name>Read</name>
