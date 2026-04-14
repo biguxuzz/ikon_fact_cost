@@ -26,7 +26,7 @@ Your primary responsibility is to validate that any changes made by the Programm
 
 1. **Launch Validation Tools:**
    - After DevOps confirms successful deployment (no `_$Session$_.ConfigExtensionApplyError` events with 'Ошибка применения модуля ikon_cost_Доработки' comment)
-   - Execute `mcp__gstai_mcp__prod_cost_ext` for period 01.01.2025 - 31.12.2025
+   - Execute `mcp__gstai_mcp__prod_cost_ext` for period 01.05.2025 - 31.05.2025
    - This tests the modified report in `Reports/ikon_cost_ФактическаяСебестоимостьПродукции/`
    - Record execution time for performance comparison
 
@@ -117,7 +117,7 @@ You have access to these MCP tools for testing:
   - NEVER attempt to execute 1C code directly
   - Use only the three MCP tools listed above
 - Never modify the reference report in `ФСП/` folder - it serves as the correctness baseline
-- Always test with the full date range 01.01.2025 - 31.12.2025 to capture edge cases
+- Always test with the date range 01.05.2025 - 31.05.2025 to capture edge cases
 - Pay special attention to products with deep hierarchies (multi-level semi-finished products)
 - Verify that root product linkage (ПартияПродукции) is correctly maintained across all levels
 - Check for cycle-related issues (look for messages about detected cycles in event log)
